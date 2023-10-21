@@ -12,10 +12,6 @@
       body {
          font-family: "Lato", sans-serif
       }
-
-      .mySlides {
-         display: none
-      }
    </style>
 </head>
 
@@ -36,27 +32,13 @@
       </div>
    </div>
 
-   <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-   <!-- <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-      <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
-      <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
-      <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
-   </div> -->
-
-   <!-- Page content -->
    <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-      <div class="mySlides w3-display-container w3-center">
-         <img src="images/city.jpg" style="width:100%; height: 400px;  background-size: contain;">
+      <div class=" w3-display-container w3-center">
+         <img src="images/city.jpg" style="width:100%; height: 400px; display: block;">
       </div>
 
       <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
-         <!-- <div class="w3-wide">
-            <div class="w3-center">
-               <img src="images/city.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:100%">
-            </div>
-         </div> -->
          <h2 class="w3-wide">About</h2>
          <p class="w3-opacity"><i>Daniel Miron Ocampo</i></p>
          <p class="w3-justify"> My name is Daniel Miron Ocampo, I am a senior in cyber security engineering. My plan is
@@ -512,39 +494,6 @@
    </footer>
 
    <script>
-      // Automatic Slideshow - change image every 4 seconds
-      var myIndex = 0;
-      carousel();
-
-      function carousel() {
-         var i;
-         var x = document.getElementsByClassName("mySlides");
-         for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-         }
-         myIndex++;
-         if (myIndex > x.length) { myIndex = 1 }
-         x[myIndex - 1].style.display = "block";
-         setTimeout(carousel, 4000);
-      }
-
-      // Used to toggle the menu on small screens when clicking on the menu button
-      function myFunction() {
-         var x = document.getElementById("navDemo");
-         if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-         } else {
-            x.className = x.className.replace(" w3-show", "");
-         }
-      }
-
-      // When the user clicks anywhere outside of the modal, close it
-      var modal = document.getElementById('ticketModal');
-      window.onclick = function (event) {
-         if (event.target == modal) {
-            modal.style.display = "none";
-         }
-      }
    </script>
 
 </body>
